@@ -44,14 +44,18 @@ function verificarCampo(campo) {
     }
   })
 
+
+
   const mensajeError = campo.parentNode.querySelector('.mensaje-error');
   const validarInputCheck = campo.checkValidity();
 
   if (!validarInputCheck) {
     mensajeError.textContent = mensaje;
+    campo.style.border = '2px solid red';
   }
   else {
     mensajeError.textContent = "";
+    campo.style.border = '2px solid #6BD1FF';
   }
 
 }
